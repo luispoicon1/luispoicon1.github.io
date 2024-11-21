@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
+
 /* Estilos generales */
 body {
     margin: 0;
@@ -9,8 +10,7 @@ body {
     background-size: cover;
 }
 
-
-
+/* Estilo para el encabezado */
 .header {
     position: relative;
     height: 70vh; /* Ajusta el encabezado para que coincida con el tamaño del video */
@@ -19,30 +19,53 @@ body {
     overflow: hidden;
 }
 
-
+/* Video de fondo */
 .header-video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    max-height: 70vh; /* Ajusta el alto máximo del video (70% de la altura de la ventana) */
+    max-height: 70vh; /* Ajusta el alto máximo del video */
     object-fit: cover;
     z-index: -1;
 }
 
-
+/* Contenedor del contenido del encabezado */
 .header-overlay {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
 
+/* Contenedor de logo y título (Flexbox) */
+/* Contenedor de logo y título (Flexbox) */
+.header-content {
+    display: flex;
+    align-items: center;  /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 20px;  /* Espacio entre el logo y el título */
+}
+
+
+/* Estilo para el logo */
+/* Estilo para la imagen del logo */
+.logo {
+    width: 80px; /* Ajusta el tamaño del logo según lo necesites */
+    height: 80px; /* Mantén el aspecto cuadrado para que se vea circular */
+    border-radius: 50%; /* Hace el borde circular */
+    border: 5px solid white; /* Borde blanco de 5px */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien al círculo */
+}
+
+
+/* Estilo para el título */
 .title {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
+/* Estilo para el menú */
 .menu {
     display: flex;
     justify-content: center;
@@ -63,6 +86,7 @@ body {
     background: white;
     color: #ba243a;
 }
+
 
 /* Productos */
 .products {
@@ -123,9 +147,10 @@ body {
 
 .modal-content {
     background: white;
-    border-radius: 10px;
+    border-radius: 0px;
     padding: 20px;
-    width: 300px;
+    width: 90%; /* Ajuste para pantallas pequeñas */
+    max-width: 500px; /* Limita el ancho */
     text-align: center;
     position: relative;
 }
@@ -138,6 +163,15 @@ body {
     cursor: pointer;
 }
 
+.modal-image {
+    width: 100%; /* Imagen ocupará el ancho disponible */
+    max-height: 500px; /* Máxima altura */
+    object-fit: cover; /* Ajuste para mantener proporción */
+    border-radius: 0px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Espacio con el resto del contenido */
+}
+
+
 /* Footer */
 .contact {
     padding: 20px;
@@ -145,3 +179,26 @@ body {
     color: white;
     text-align: center;
 }
+/* Sección Sobre Nosotros */
+.sobre-nosotros {
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+    margin-top: 20px;
+}
+
+.sobre-nosotros h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ba243a; /* El color puede cambiarse según tu preferencia */
+}
+
+.sobre-nosotros p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
