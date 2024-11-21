@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    background: url('FONDOESTRELLA.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+
+.header {
+    position: relative;
+    height: 70vh; /* Ajusta el encabezado para que coincida con el tamaño del video */
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 70vh; /* Ajusta el alto máximo del video (70% de la altura de la ventana) */
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.header-overlay {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    background: white;
+    color: #ba243a;
+}
+
+/* Productos */
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    border-radius: 10px;
+    padding: 20px; /* Aumenta el relleno interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s;
+    width: 250px; /* Ajusta el ancho */
+    height: 350px; /* Ajusta la altura */
+    display: flex;
+    flex-direction: column; /* Para alinear el contenido verticalmente */
+    align-items: center; /* Centra el contenido */
+    justify-content: space-between; /* Espacia los elementos dentro del cuadro */
+}
+
+.product:hover {
+    transform: scale(1.1); /* Incrementa el tamaño en el hover */
+}
+
+.product img {
+    max-width: 200px; /* Aumenta el tamaño máximo de las imágenes */
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    margin-top: 10px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Footer */
+.contact {
+    padding: 20px;
+    background: #333;
+    color: white;
+    text-align: center;
+}
